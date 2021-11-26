@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\notificationSender;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+
+Route::post('notification', [notificationSender::class, 'index'])->name('notification-sender');
