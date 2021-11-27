@@ -16,11 +16,14 @@
       padding: 0;
     }
   }
-
+#containerBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   section.home .theBox {
     width: 320px;
     min-height: 82vh;
-    margin-left: 300px;
     background: #FFFFFF;
     border-radius: 12px;
     padding: 12px 30px;

