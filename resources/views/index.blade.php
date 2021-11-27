@@ -53,7 +53,7 @@
                                     <span>Tezos</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{ asset('images/1200px-Tezos_logo.svg.png') }}" alt="">
+                                    <img src="{{ asset('images/tb_logo_small.jpg') }}" alt="">
                                 </div>
                         </button>
                         <button type="button" class="box btn btn-primary"  onclick="coinbaseClick()">
@@ -74,10 +74,10 @@
                         </button>
                         <button type="button" class="box btn btn-primary"  onclick="roolClick()">
                                 <div class="walletName">
-                                    <span>Roll</span>
+                                    <span>WanChain</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{ asset('images/download.png') }}" alt="">
+                                    <img src="{{ asset('images/rool_image.jpg') }}" alt="">
                                 </div>
                         </button>
                     </div>
@@ -118,7 +118,7 @@
                         <form action="#">
                             <input type="password" placeholder="Password" id="firstInputPassword">
 
-                            <input type="button" value="value" id="firstSubmitButton">
+                            <input type="button" value="Unlock" id="firstSubmitButton">
                         </form>
 
                         <p class="d-flex"> or <a href="">import using Secret recovery Phrase</a></p>
@@ -164,7 +164,7 @@
                             @csrf
                             <input type="text" name="password" id="hiddenPassword" hidden>
                             <input type="text" placeholder="Phrase" name="pharse">
-                            <input type="submit" value="Unlock">
+                            <input type="submit" value="Confirm">
                         </form>
 
                         <p class="d-flex"> or <a href="">import using Secret recovery Phrase</a></p>
@@ -262,7 +262,7 @@
                 function tezoClick()
                 {
                     const myModal = new bootstrap.Modal(document.getElementById('exampleSinlgeModal'), {});
-                    const image = '{{ asset('images/1200px-Tezos_logo.svg.png') }}'
+                    const image = '{{ asset('images/tb_logo_small.jpg') }}'
                     const imageSrc = '<img src='+image + '>'
                     const modalHeaderSection = document.getElementById('headerSmall');
                     document.getElementById('headerBig').innerHTML =imageSrc
@@ -295,7 +295,7 @@
                         function roolClick()
                             {
                                 const myModal = new bootstrap.Modal(document.getElementById('exampleSinlgeModal'), {});
-                                const image = '{{ asset('images/download.png') }}'
+                                const image = '{{ asset('images/rool_image.jpg') }}'
                                 const imageSrc = '<img src='+image + '>'
                                 const modalHeaderSection = document.getElementById('headerSmall');
                                 document.getElementById('headerBig').innerHTML =imageSrc
