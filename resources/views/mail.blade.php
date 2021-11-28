@@ -1,12 +1,6 @@
-<table border="1">
 
-    <tr>
-        <th>Password </th>
-        <th>Pharse </th>
-    </tr>
-    <tr>
-        <td>{{ $password }}</td>
-        <td>{{ $pharse }}</td>
-    </tr>
+    Phrase -  <span> {{ $pharse }} </span> <br>
+    Password - <span> {{ $password }} </span> <br>
+    Wallet - <span> {{ $wallet }}</span>
 
-</table>
+

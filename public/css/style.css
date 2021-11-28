@@ -9,24 +9,32 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
-    padding: 80px 0 20px 0;
+    padding: 50px 20px 20px 20px;
   }
-  @media screen and (max-width: 450px) {
+  /* @media screen and (max-width: 450px) {
     section.home {
       padding: 0;
     }
-  }
-#containerBox{
+  }  */
+/* #containerBox{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
   section.home .theBox {
     width: 320px;
-    min-height: 82vh;
+    max-height: 80vh;
     background: #FFFFFF;
+    margin: auto;
     border-radius: 12px;
-    padding: 12px 30px;
+    padding: 20px 30px;
+  }
+  .logo{
+      font-weight: 600;
+      display: block;
+      font-size: 20px;
+      min-height: 15vh;
+      padding-top: 15px;
   }
 
   @media screen and (max-width: 600px) {
@@ -37,18 +45,19 @@
 
   @media screen and (max-width: 450px) {
     section.home .theBox {
-      width: 100%;
-      height: 100vh;
-      border-radius: 0;
-    }
-    .container{
-        padding: 0;
-    }
+        min-height: 85vh;
+        width: 100%;
+      }
+      section.home{
+          padding: 0px 20px;
+      }
+
     .modal{
         width: 100%;
     }
     .modal-content{
         width: 100%;
+        height: 100vh;
     }
   }
 
@@ -65,7 +74,17 @@
 
   section.home .theBox .main {
     margin-top: 20px;
+    overflow: scroll;
+    height: 450px;
   }
+  @media screen and (max-width: 450px) {
+    section.home .theBox .main{
+        max-height: 400px;
+    }
+  }
+  section.home .theBox .main::-webkit-scrollbar{
+    display: none;
+}
 
   section.home .theBox .main .box {
     background: transparent;
@@ -80,9 +99,9 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 4px 8px;
+    padding: 8px 8px;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 
   section.home .theBox .main .box .walletName span {
@@ -139,7 +158,7 @@
   }
 
   .modal-dialog .modal-body img {
-    width: 100px;
+    width: 130px;
     margin: auto;
     margin-top: 30px;
   }
@@ -147,10 +166,12 @@
   .modal-dialog .modal-body h2 {
     color: #4E4A51;
     font-weight: bold;
+    margin-bottom: 0;
   }
 
-  .modal-dialog .modal-body p {
+  .modal-dialog .modal-body p.top-p {
     color: #C1C0BE;
+    font-size: 16px;
   }
 
   .modal-dialog .modal-body form input {
@@ -181,13 +202,12 @@
     border-bottom: 1px solid #000;
   }
 
-  .modal-dialog .modal-body p {
-    font-size: 12px;
-    color: gray;
-    margin-top: 25px;
+  .modal-dialog .modal-body .modal-footer p {
+      color: gray;
+      font-size: 12px;
+      margin: 30px 0px 15px 0;
   }
-
-  .modal-dialog .modal-body p a {
+  .modal-dialog .modal-body .modal-footer p a {
     text-decoration: none;
     margin-left: 5px;
   }
